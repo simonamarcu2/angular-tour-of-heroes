@@ -15,6 +15,7 @@
   <input id="name" [(ngModel)]="hero.name" placeholder="name" />
 </div> -->
 <h2>My Superheroes</h2>
+
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <button
@@ -28,11 +29,13 @@
   </li>
 </ul>
 
-<div *ngIf="selectedHero">
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+
+<!-- <div *ngIf="selectedHero">
   <h2>{{ selectedHero.name | uppercase }} Details</h2>
   <div>id: {{ selectedHero.id }}</div>
   <div>
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name" />
   </div>
-</div>
+</div> -->
